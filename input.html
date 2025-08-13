@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>input</title>
   <style>
-    /* Reset */
     * {
       box-sizing: border-box;
     }
@@ -22,7 +21,7 @@
       align-items: center;
       position: relative;
     }
-    /* ตอนโหลด พื้นหลังดำ และซ่อนเนื้อหา */
+    
     body.loading {
       background-color: black;
       overflow: hidden;
@@ -31,11 +30,9 @@
       display: none;
     }
 
-        /* Spinner 3D */
         body.loading {
       background-color: black;
       overflow: hidden;
-      /* กำหนด display flex ให้ body ตอนโหลดเพื่อจัดตำแหน่งกลาง */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -44,14 +41,13 @@
     }
 
     .spinner {
-      position: relative; /* ลบ fixed ออก */
+      position: relative;
       width: 70.4px;
       height: 70.4px;
       --clr: rgb(247, 197, 159);
       --clr-alpha: rgba(247, 197, 159, 0.1);
       animation: spinner 1.6s infinite ease;
       transform-style: preserve-3d;
-      /* เอา top,left,transform ออก */
       z-index: 9999;
 
       opacity: 1;
@@ -107,7 +103,6 @@
       }
     }
 
-    /* ฟอร์ม */
     #content {
       background-color: #fff;
       padding: 1rem;
@@ -198,7 +193,6 @@
       }, 1500); // โหลด 3 วิ
     });
 
-    // ฟังก์ชันส่งข้อมูล (ถ้าต้องการ)
     document.getElementById("nameForm").addEventListener("submit", function(e) {
       e.preventDefault();
 
